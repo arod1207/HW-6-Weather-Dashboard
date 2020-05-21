@@ -1,0 +1,22 @@
+body {
+    font-family: 'Jost', sans-serif;
+    background-color: lightgray;
+}
+
+.jumbotron {
+    color: white;
+}
+
+#searchText {
+    border: 1px solid red;
+    width: 400px;
+}
+#currentForcast {
+    border: 1px solid green;
+}
+#searches {
+    border: 1px solid purple;
+}
+#forcast {
+    border: 1px solid black;
+}

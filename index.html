@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <title>My Weather App</title>
+</head>
+<body>
+    <header class="jumbotron bg-dark" style="text-align: center;">
+        <h1>Weather Dashboard</h1>
+    </header>
+    <div class="container">
+        <div class="row">
+            <div class="col-4-md">
+                 <div id="searchText"> 
+                     <label>Search for a City:</label>
+                     <input class="form-control" id="city" placeholder="City">
+                    <button class="btn-primary submit" type="submit">Submit</button>
+                 </div>
+            </div>
+            
+        
+            
+            <div class="col-6 card">
+                <div id="currentForcast">
+                    <h1>Current Forcast</h1>
+                </div>
+            </div>
+            
+                <div class="row">
+                    <div id="forcast" class="card">
+                        <h1>Future Forcast</h1>
+                    </div>
+                </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="main.js"></script>
+    
+
+</body>
+</html>
+
