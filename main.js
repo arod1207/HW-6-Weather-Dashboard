@@ -26,20 +26,28 @@ $.ajax({
     var iconURL = "http://openweathermap.org/img/wn/" + weatherIcon + ".png"
  
     var newImg = $('<img>');
-    var newDiv = $('<div>');
-    var p = $('<p>').text(temp);
-    var p2 = $('<p>').text(weather);
+    // var newDiv = $('<div>');
+    
+    console.log(iconURL)
+    
+    $("#cityName").html(city)
+    $("#currentWeatherImg").append('src' , iconURL)
+    $("#temperature").text(`Temperature: ${temp} \xB0F`);
+    $("#humidity").text(`Humidty: ${humidity} %`)
+    $("#windSpeed").text(`Wind Speed: ${windSpeed} MPH`)
+    
  
 
     newImg.attr('src', iconURL);
-    $('body').append(newImg)
-    $('body').append(newDiv);
-    newDiv.append(p)
-    newDiv.append(weather);
-    newDiv.append(newImg);
+     $('#cityName').append(newImg)
+    // $('body').append(newDiv);
+    // newDiv.append(p)
+    // newDiv.append(weather);
+    // newDiv.append(newImg);
 
 // Api for UV Index //
     var apiUvIndexUrl = apiUvIndex +`lat=${lat}`+`&lon=${lon}`+ apiKey;
+    console.log(apiUvIndexUrl)
 })
 
 // api for the 5 day forcast //
