@@ -12,19 +12,20 @@
     <header class="jumbotron bg-dark" style="text-align: center;">
         <h1>Weather Dashboard</h1>
     </header>
-    <div class="container">
+    <div class="container-fluid my-container">
         <div class="row">
-            <div class="col-4-md">
+            <div class="col-md-4">
                  <div id="searchText"> 
                      <label>Search for a City:</label>
-                     <input class="form-control" id="city" placeholder="City">
+                        <input type="text" class="form-control input-form" id="city" placeholder="City">
+                        <br>
                     <button class="btn-primary submit" type="submit">Submit</button>
                  </div>
             </div>
             
         
             
-            <div class="col-6 card">
+            <div class="col-md-8">
                 <div id="currentForcast">
                     <h1 id="cityName"></h1>
                         <ul>
@@ -35,13 +36,44 @@
                         </ul>
                 </div>
             </div>
+        </div> 
             
-                <div class="row">
-                    <div id="forcast" class="card">
-                        <h1>Future Forcast</h1>
+                <div class="row justify-content-end">
+                    <div class="col-md-8">
+                        <div>
+                            <h3>5-Day Forcast:</h3>
+                            <div class="row justify-content-center">
+                                <div class="col-md-2 boxes forcast">
+                                    <p id="day1day"></p>
+                                    <p id="weatherIcon1"></p>
+                                    <p id="day1temp"></p>
+                                    <p id="day1humidity"></p>
+                                </div>
+                                <div class="col-md-2 boxes forcast">
+                                    <p id="day2day"></p>
+                                    <p id="day2temp"></p>
+                                    <p id="day2humidity"></p>
+                                </div>
+                                <div class="col-md-2 boxes forcast">
+                                    <p id="day3day"></p>
+                                    <p id="day3temp"></p>
+                                    <p id="day3humidity"></p>
+                                </div>
+                                <div class="col-md-2 boxes forcast">
+                                    <p id="day4day"></p>
+                                    <p id="day4temp"></p>
+                                    <p id="day4humidity"></p>
+                                </div>
+                                <div class="col-md-2 boxes forcast">
+                                    <p id="day5day"></p>
+                                    <p id="day5temp"></p>
+                                    <p id="day5humidity"></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
-        </div>
+        
     </div>
 
 
@@ -50,8 +82,9 @@
 
 
 
-
-
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="main.js"></script>
     
