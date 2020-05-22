@@ -1,40 +1,27 @@
 body {
     font-family: 'Jost', sans-serif;
-    background-color: lightgray;
+    background-color: white;
     margin: 30px;
 }
-.my-container {
-    border: 3px solid peru;
-}
+
 .jumbotron {
     color: white;
 }
 
-#searchText {
-    border: 1px solid red;
-    
-    
-}
+
 #currentForcast {
-    border: 1px solid green;
+    
 }
-#searches {
-    border: 1px solid purple;
-}
+
 #forcast {
     border: 1px solid black;
 }
 
-.boxes  {
-    border: 1px red solid;
-}
+.forcast-boxes  {
+    margin: 5px;
+    background-color: blue;
+    color: white;
+} 
 
-.forcast {
-    width: 40px;
-    height: 200px;
-    margin: 20px;
-}
 
-.input-form {
-    width: 350px;
-}
+
