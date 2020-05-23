@@ -11,20 +11,26 @@
     <link
       href="https://fonts.googleapis.com/css2?family=Jost:wght@500&display=swap"
       rel="stylesheet"/>
+      <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+      integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+      crossorigin="anonymous"
+    />
     <link rel="stylesheet" href="styles.css" />
     <title>My Weather App</title>
   </head>
   <body>
-    <header class="jumbotron bg-dark" style="text-align: center;">
-      <h1>Weather Dashboard</h1>
+    <header class="jumbotron " style="text-align: center;">
+      <h1><i class="fas fa-cloud"></i> Weather Dashboard <i class="fas fa-cloud"></i></h1>
     </header>
   <div className="container">
     <div class="row justify-content-center">
-      <div class="col-sm-3 col-xs-12"å>
+      <div class="col-sm-3 col-xs-12">
             <form>
               <div class="form-group">
                 <div id="searchText">
-                  <label>Search for a City:</label>
+                  <label>Search for a City <i class="fas fa-search"></i></label>
                   <input
                     type="text"
                     class="form-control input-form"
@@ -33,16 +39,18 @@
                  </input>
                  <br>
                  <button type="button" class="btn btn-primary submit">Search</button>
-                  
                 </div>
               </div>
             </form>
+            <div id="Searches">
+              <ul id="userSearches"></ul>
+            </div>
       </div>
       <div class="col-sm-6 col-xs-12">
         <div class="row">
           <div id="currentForcast">
             <h1 id="cityName"></h1>
-            <ul>
+            <ul class="list-unstyled">
               <li id="temperature">Temperature:</li>
               <li id="humidity">Humidity:</li>
               <li id="windSpeed">Wind Speed:</li>
@@ -54,7 +62,7 @@
         <div class="row">
             <div>
                 <h3>5-Day Forcast:</h3>
-                <div class="row display:hidden justify-content-end">
+                <div class="row justify-content-center forcastBoxes" style="display:none">
                   <div class="col-md-2 col-sm-12 forcast-boxes forcast">
                     <p id="day1day"></p>
                     <p id="weatherIcon1"></p>

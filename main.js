@@ -3,10 +3,15 @@ var apiKey = "&appid=f64bc4198de67489ead6d5ca4ee4bd1b";
 var units = "&units=imperial";
 var apiForcast = "http://api.openweathermap.org/data/2.5/forecast?q=";
 var apiUvIndex = "http://api.openweathermap.org/data/2.5/uvi?";
+var forcastBoxes = $('.forcastBoxes');
+// added this array TEST //
+var citySearchArr = [];
 
 // on button click run the Current Forcast, UV index, and Future Forcast //
 $(".submit").on("click", function (e) {
-  e.preventDefault();
+  e.preventDefault(); 
+
+  $('.forcastBoxes').show()
 
   // calls the api for todays weather //
   var url = apiToday + city.value + apiKey + units;
@@ -34,6 +39,10 @@ $(".submit").on("click", function (e) {
     var newImg = $("<img>");
     newImg.attr("src", iconURL);
     $("#cityName").append(newImg);
+
+    // localStorage.setItem('currentWeather',  );
+    // localStorage.setItem('currentWeather',  );
+    
 
     // Api for UV Index //
     var urlUvIndex = apiUvIndex + `lat=${lat}` + `&lon=${lon}` + apiKey;
@@ -93,6 +102,7 @@ $(".submit").on("click", function (e) {
       var day4humidity = fResponse.list[24].main.humidity;
       var day5humidity = fResponse.list[32].main.humidity;
 
+      
       $("#day1day").html(day1day);
       $("#day2day").html(day2day);
       $("#day3day").html(day3day);
@@ -116,6 +126,25 @@ $(".submit").on("click", function (e) {
       $("#day3humidity").html(`Humidty: ${day3humidity} %`);
       $("#day4humidity").html(`Humidty: ${day4humidity} %`);
       $("#day5humidity").html(`Humidty: ${day5humidity} %`);
+
+      
+      
+      // appending cities to new <li> //
+       var userCityValue = $('#city').val();
+       citySearchArr.push(userCityValue);
+       console.log(citySearchArr)
+
+       var newUserSearch = $('#city').val();
+       var li = $('<li>');
+       $('#userSearches').append(li);
+       li.prepend(newUserSearch);
+
+       
+       
+  
+      
+  
+       
 
     });
   });
