@@ -1,18 +1,14 @@
 body {
     font-family: 'Jost', sans-serif;
-    background-color: lightgray;
-    margin: 30px;
+    background-color: rgb(177, 212, 233);
+   
 }
 
 .jumbotron {
-    background-color: blue;
+    background-color:rgb(110, 179, 170);
     color: white;
 }
 
-
-#currentForcast {
-    
-}
 
 #forcast {
     border: 1px solid black;
@@ -20,7 +16,7 @@ body {
 
 .forcast-boxes  {
     margin: 7px;
-    background-color: blue;
+    background-color: rgb(110, 179, 170);
     color: white;
     border-radius: 20px;
     

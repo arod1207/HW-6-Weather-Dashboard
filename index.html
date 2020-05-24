@@ -27,7 +27,7 @@
   <div className="container">
     <div class="row justify-content-center">
       <div class="col-sm-3 col-xs-12">
-            <form>
+            <form onSubmit="return false;">
               <div class="form-group">
                 <div id="searchText">
                   <label>Search for a City <i class="fas fa-search"></i></label>
@@ -42,8 +42,8 @@
                 </div>
               </div>
             </form>
-            <div id="Searches">
-              <ul id="userSearches"></ul>
+            <div>
+              <ul class="list-unstyled" id="userSearches"></ul>
             </div>
       </div>
       <div class="col-sm-6 col-xs-12">

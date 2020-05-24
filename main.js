@@ -6,10 +6,17 @@ var apiUvIndex = "http://api.openweathermap.org/data/2.5/uvi?";
 var forcastBoxes = $('.forcastBoxes');
 // added this array TEST //
 var citySearchArr = [];
+var currentWeatherArr = [];
+
+
+
+
 
 // on button click run the Current Forcast, UV index, and Future Forcast //
-$(".submit").on("click", function (e) {
-  e.preventDefault(); 
+$(".submit").on("click", function(event) {
+  event.preventDefault(); 
+
+  
 
   $('.forcastBoxes').show()
 
@@ -40,8 +47,17 @@ $(".submit").on("click", function (e) {
     newImg.attr("src", iconURL);
     $("#cityName").append(newImg);
 
-    // localStorage.setItem('currentWeather',  );
-    // localStorage.setItem('currentWeather',  );
+   // Local Storage //
+    var currentWeather = {
+     cityName: city.value,
+     temperature: temp,
+     humidity: humidity,
+     windSpeed: windSpeed,
+   }
+   currentWeatherArr.push(currentWeather)
+   var cWeather = JSON.stringify(currentWeatherArr)
+
+   localStorage.setItem('currentWeather', cWeather);
     
 
     // Api for UV Index //
@@ -132,20 +148,25 @@ $(".submit").on("click", function (e) {
       // appending cities to new <li> //
        var userCityValue = $('#city').val();
        citySearchArr.push(userCityValue);
-       console.log(citySearchArr)
+      
 
        var newUserSearch = $('#city').val();
        var li = $('<li>');
        $('#userSearches').append(li);
        li.prepend(newUserSearch);
 
-       
-       
-  
+      // local storage for cities user has searched for //
+       var savedSearches = JSON.stringify(citySearchArr);
+       localStorage.setItem('savedSearches', savedSearches);
+
       
-  
        
+    
 
     });
   });
 });
+
+var userS = JSON.parse(localStorage.getItem('savedSearches'));
+
+// li.append(userS)
