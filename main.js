@@ -1,8 +1,8 @@
-var apiToday = "http://api.openweathermap.org/data/2.5/weather?q=";
+var apiToday = "https://api.openweathermap.org/data/2.5/weather?q=";
 var apiKey = "&appid=f64bc4198de67489ead6d5ca4ee4bd1b";
 var units = "&units=imperial";
-var apiForcast = "http://api.openweathermap.org/data/2.5/forecast?q=";
-var apiUvIndex = "http://api.openweathermap.org/data/2.5/uvi?";
+var apiForcast = "https://api.openweathermap.org/data/2.5/forecast?q=";
+var apiUvIndex = "https://api.openweathermap.org/data/2.5/uvi?";
 var forcastBoxes = $(".forcastBoxes");
 // added this array TEST //
 var citySearchArr = [];
