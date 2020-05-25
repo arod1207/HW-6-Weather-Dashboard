@@ -182,5 +182,7 @@ for (i = 0; i < userS.length; i++) {
     
     var savedUVindex = localStorage.getItem("uvIndex")
     $("#uvIndex").text(`UV Index: ${savedUVindex}`);
- 
 
+
+   
+ 
