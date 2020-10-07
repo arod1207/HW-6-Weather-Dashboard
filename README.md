@@ -5,4 +5,4 @@
     * https://openweathermap.org/
     
 * Weather Dashboard 
-   * https://arod1207.github.io/HW-6-Weather-Dashboard/
+   * https://arod1207.github.io/Weather-Dashboard/
